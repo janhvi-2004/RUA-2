@@ -1,0 +1,19 @@
+// Mobile first (up to 767px)
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+// Tablet (768px to 1023px)
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

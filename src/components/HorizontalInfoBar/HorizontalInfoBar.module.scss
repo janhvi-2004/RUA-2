@@ -1,0 +1,33 @@
+@import "../../themes/variables.module";
+@import "../../themes/mixins.module";
+
+.HorizontalInfoBar {
+  border: 1px solid black;
+  margin: 3rem 0rem;
+  display: flex;
+  height: 16rem;
+
+  @include mobile() {
+    flex-direction: column;
+    border: none;
+  }
+  
+  .Left {
+    padding: 5rem;
+    border-right: 1px solid black;
+    background-color: black;
+    color: white;
+    @include flexCenter;
+
+    @include mobile () {
+      border-right: none;
+    }
+  }
+
+  .Right {
+    @include flexCenter();
+    padding: 3rem;
+        overflow-wrap: break-word;
+    word-break: break-word;
+  }
+}

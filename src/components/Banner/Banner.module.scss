@@ -1,0 +1,43 @@
+.Banner {
+  .Background {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: opacity 1s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.27);
+      z-index: 1;
+    }
+    .Content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .ChevronIcons {
+      display: flex;
+      justify-content: space-between;
+      z-index: 2;
+
+      svg {
+        cursor: pointer;
+      }
+    }
+  }
+}
