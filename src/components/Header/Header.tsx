@@ -4,7 +4,7 @@ import { RxCross1 } from "react-icons/rx";
 import { CiMenuFries } from "react-icons/ci";
 
 const Header = () => {
-  const navItems = ["HOME", "SERVICES", "ABOUT", "CONTACT"];
+  const navItems = ["SERVICES", "ABOUT", "CONTACT"];
 
   const [isMobileView, setIsMobileView] = useState(false);
   const [openMobNav, setOpenMobNav] = useState(false);
@@ -36,7 +36,7 @@ const Header = () => {
           <div className={styles.BottomContainer}>
             <div className={styles.MobNavItems}>
               {navItems.map((navItem, index) => (
-                <a key={index} href="/">
+                <a key={index} href={`${navItem.toLowerCase()}`}>
                   {navItem}
                 </a>
               ))}
@@ -60,7 +60,7 @@ const Header = () => {
               )
             ) : (
               navItems.map((navItem, index) => (
-                <a key={index} href="/">
+                <a key={index} href={`${navItem.toLowerCase()}`}>
                   {navItem}
                 </a>
               ))
